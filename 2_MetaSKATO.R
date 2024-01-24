@@ -46,7 +46,6 @@ for (nc_ in 1:length(list_cohort)){
 
 # Execute the SKAT-O analysis
 Cohort.Info <- Open_MSSD_File_2Read(File.Mat.vec, File.Info.vec)
-print('Start analysis')
 table_res <- MetaSKAT_MSSD_ALL(Cohort.Info, combined.weight=FALSE, is.separate = TRUE, MAF.cutoff=0.05, method='optimal', Group_Idx=Group_Idx)
 
 # Write
