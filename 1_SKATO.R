@@ -52,7 +52,7 @@ RunSKATO <- function(df_famcov, df_geno_element) {
     
     # SKATO
     obj <- SKAT_Null_Model(y ~ Cov, out_type = 'D') # Build obj
-    res_skat <- SKAT(as.matrix(df_geno_element), obj, method="optimal.adj", max_maf = 0.05)
+    res_skat <- SKATBinary(as.matrix(df_geno_element), obj, method="SKATO", max_maf = 0.05)
   } 
 
   return(res_skat)
